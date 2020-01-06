@@ -37,6 +37,12 @@ addItem(){
   })
 }
 
+onKeyPress = (e) => {
+  if(e.which === 13) {
+    this.addItem();
+  }
+}
+
 deleteItem(id){
   //create a function to delete the individual list items on button click
   //copy current list of items
@@ -58,6 +64,7 @@ deleteItem(id){
           placeholder = "Type New List Item Here..."
           value = {this.state.toDo}
           onChange = {e => this.updateInput("toDo", e.target.value)}
+          onKeyPress = {this.onKeyPress}
           />
           <button id = "addButton" onClick={() => this.addItem()}>Add Item</button>
           <br/>
