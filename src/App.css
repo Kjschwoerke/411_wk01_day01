@@ -33,6 +33,7 @@
   background: Grey;
   height: auto;
   width: 75%;
+  max-width: 750px;
   border-radius: 10px;
 }
 
@@ -40,6 +41,7 @@
   margin: 1em 1em 0.5em 1em;
   height: 2rem;
   width: 55%;
+  max-width: 500px;
   border-radius: 10px;
   padding: .25em;
 }
@@ -47,6 +49,7 @@
 .App #addButton {
   height: 2rem;
   width: 35%;
+  max-width: 85px;
   margin: .5em 1em 1em 1em;
   border-radius: 10px;
   border: green solid 2px;
