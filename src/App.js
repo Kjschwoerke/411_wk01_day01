@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -50,17 +49,19 @@ deleteItem(id){
   render() {
     return (
       <div className="App">
-        <div>
-          Add an Item...
+        <div className="container">
+          <h1>Add an Item...</h1>
           <br/>
+          <div id = "inputContainer">
           <input
           type = "text"
           placeholder = "Type New List Item Here..."
           value = {this.state.toDo}
           onChange = {e => this.updateInput("toDo", e.target.value)}
           />
-          <button onClick={() => this.addItem()}>Add Item</button>
+          <button id = "addButton" onClick={() => this.addItem()}>Add Item</button>
           <br/>
+          </div>
           <ul>
             {this.state.list.map(item=> {
               return(
@@ -68,7 +69,7 @@ deleteItem(id){
                 <li key={item.id}>
                   {item.value}
                   {/* create a button that deletes an item */}
-                  <button onClick={() => this.deleteItem(item.id)}>Delete Item</button>
+                  <button id = "deleteButton" onClick={() => this.deleteItem(item.id)}>Delete Item</button>
                 </li>
               )
             })}
